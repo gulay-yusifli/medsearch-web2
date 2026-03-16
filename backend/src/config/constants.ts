@@ -1,0 +1,10 @@
+export const BCRYPT_ROUNDS = 12;
+export const DEFAULT_PAGE_SIZE = 10;
+export const MAX_PAGE_SIZE = 100;
+export const TOKEN_EXPIRES = '7d';
+export const REFRESH_TOKEN_EXPIRES = '30d';
+export const RATE_LIMIT_AUTH_WINDOW_MS = 15 * 60 * 1000; // 15 minutes
+export const RATE_LIMIT_AUTH_MAX = 20;
+export const RATE_LIMIT_API_WINDOW_MS = 60 * 1000; // 1 minute
+export const RATE_LIMIT_API_MAX = 200;
+export const ALLOWED_IMAGE_TYPES = ['image/jpeg', 'image/png', 'image/webp'];
