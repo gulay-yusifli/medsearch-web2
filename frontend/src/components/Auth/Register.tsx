@@ -17,7 +17,7 @@ const Register: React.FC = () => {
 
   const validate = () => {
     if (!form.name || !form.email || !form.password) return 'Bütün məcburi sahələri doldurun';
-    if (form.password.length < 6) return 'Şifrə ən az 6 simvol olmalıdır';
+    if (form.password.length < 8) return 'Şifrə ən az 8 simvol olmalıdır';
     if (form.password !== form.confirm) return 'Şifrələr uyğun gəlmir';
     return null;
   };
@@ -110,7 +110,7 @@ const Register: React.FC = () => {
                   type={showPass ? 'text' : 'password'}
                   value={form.password}
                   onChange={(e) => setField('password', e.target.value)}
-                  placeholder="Ən az 6 simvol"
+                  placeholder="Ən az 8 simvol"
                   className="input-field pl-10 pr-10"
                 />
                 <button

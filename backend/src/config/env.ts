@@ -12,9 +12,7 @@ const env = {
   NODE_ENV: process.env.NODE_ENV || 'development',
   isDev: (process.env.NODE_ENV || 'development') === 'development',
   MONGODB_URI: getEnv('MONGODB_URI', 'mongodb://localhost:27017/medsearch'),
-  JWT_SECRET: process.env.NODE_ENV === 'production'
-    ? getEnv('JWT_SECRET')
-    : getEnv('JWT_SECRET', 'dev-secret-do-not-use-in-production'),
+  JWT_SECRET: getEnv('JWT_SECRET'),
   JWT_EXPIRES_IN: process.env.JWT_EXPIRES_IN || '7d',
   GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY || '',
   OPENAI_API_KEY: process.env.OPENAI_API_KEY || '',
@@ -28,7 +26,7 @@ const env = {
   SMTP_FROM: process.env.SMTP_FROM || 'MedSearch <noreply@medsearch.az>',
   FRONTEND_URL: process.env.FRONTEND_URL || 'http://localhost:3000',
   ADMIN_EMAIL: process.env.ADMIN_EMAIL || 'admin@medsearch.az',
-  ADMIN_PASSWORD: process.env.ADMIN_PASSWORD || 'Admin123!',
+  ADMIN_PASSWORD: getEnv('ADMIN_PASSWORD', 'Admin123!'),
 };
 
 export default env;

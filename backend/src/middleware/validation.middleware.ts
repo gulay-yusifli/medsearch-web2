@@ -13,7 +13,7 @@ export const handleValidation = (req: Request, res: Response, next: NextFunction
 export const registerValidation = [
   body('name').trim().isLength({ min: 2 }).withMessage('Ad ən az 2 simvol olmalıdır'),
   body('email').isEmail().withMessage('Düzgün e-poçt daxil edin').normalizeEmail(),
-  body('password').isLength({ min: 6 }).withMessage('Şifrə ən az 6 simvol olmalıdır'),
+  body('password').isLength({ min: 8 }).withMessage('Şifrə ən az 8 simvol olmalıdır'),
   handleValidation,
 ];
 
