@@ -63,6 +63,16 @@ app.use('/api/chat', chatRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/reminders', reminderRoutes);
 
+// ✅ ROOT ROUTE
+app.get('/', (_req, res) => {
+  res.json({ 
+    success: true,
+    message: 'MedSearch API',
+    version: '1.0.0',
+    status: 'running'
+  });
+});
+
 // Health check
 app.get('/health', (_req, res) => res.json({ status: 'ok', env: env.NODE_ENV }));
 
